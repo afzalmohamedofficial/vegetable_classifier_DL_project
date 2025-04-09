@@ -29,7 +29,7 @@ if uploaded_file is not None:
     st.image(img, caption="Uploaded Image", use_container_width=True)
 
     img = img.resize((224, 224))
-    img_array = np.array(img) / 255.0
+    img_array = np.array(img)
     img_array = np.expand_dims(img_array, axis=0)
 
     prediction = model.predict(img_array)
