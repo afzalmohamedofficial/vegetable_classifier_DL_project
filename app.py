@@ -37,4 +37,4 @@ if uploaded_file is not None:
     predicted_label = class_names[predicted_index]
     confidence = prediction[0][predicted_index]
 
-    st.success(f"**Prediction:** {predicted_label} ({confidence:.2f} confidence)")
+    st.success(f"**Prediction:** {predicted_label} ({(confidence*100):.2f} confidence)")
